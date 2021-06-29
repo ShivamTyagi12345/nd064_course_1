@@ -1,16 +1,18 @@
 from flask import Flask
 from flask import json
-
+import logging
 app = Flask(__name__)
 
 @app.route('/status')
-def status():
+
+
+def healthcheck():
     response = app.response_class(
             response=json.dumps({"result":"OK - healthy"}),
             status=200,
             mimetype='application/json'
     )
-
+    app.logger.info('Status request successfull')
     return response
 
 @app.route('/metrics')
@@ -20,12 +22,15 @@ def metrics():
             status=200,
             mimetype='application/json'
     )
-
+    app.logger.info('metrics request successfull')
     return response
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    app.logger.info('main request successfull')
+
+    return "Hello Tyagi!"
 
 if __name__ == "__main__":
+    logging.basicConfig(filename='app.log',level=logging.DEBUG)
     app.run(host='0.0.0.0')
