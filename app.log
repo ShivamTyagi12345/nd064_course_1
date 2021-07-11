@@ -1,0 +1,13 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.29.122:5000/ (Press CTRL+C to quit)
+INFO:app:main request successfull
+INFO:werkzeug:127.0.0.1 - - [29/Jun/2021 22:41:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jun/2021 22:41:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:app:Status request successfull
+INFO:werkzeug:127.0.0.1 - - [29/Jun/2021 22:42:14] "GET /status HTTP/1.1" 200 -
+INFO:app:metrics request successfull
+INFO:werkzeug:127.0.0.1 - - [29/Jun/2021 22:42:22] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Jun/2021 22:42:47] "[33mGET /not%20found HTTP/1.1[0m" 404 -
+INFO:app:main request successfull
+INFO:werkzeug:127.0.0.1 - - [29/Jun/2021 22:45:47] "GET / HTTP/1.1" 200 -
